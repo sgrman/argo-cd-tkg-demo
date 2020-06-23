@@ -2,7 +2,7 @@ apiVersion: run.tanzu.vmware.com/v1alpha1
 kind: TanzuKubernetesCluster
 metadata:
   name: argo-test #name of cluster
-  namespace: demo #namespace
+  namespace: argocd #namespace
 spec:
   topology: 
     controlPlane:

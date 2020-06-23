@@ -1,0 +1,25 @@
+apiVersion: run.tanzu.vmware.com/v1alpha1
+kind: TanzuKubernetesCluster
+metadata:
+  name: argo-test #name of cluster
+  namespace: demo #namespace
+spec:
+  topology: 
+    controlPlane:
+     count: 1
+     class: best-effort-xsmall # vmclass to be used for master(s) 
+     storageClass: vs7wk8s
+    workers:
+      count: 1
+      class: best-effort-xsmall # vmclass to be used for workers(s) 
+      storageClass: vs7wk8s
+  distribution:
+    version: v1.16.8+vmware.1-tkg.3.60d2ffd #for beta 3
+settings: 
+  network:
+    cni:
+     name: calico
+    services:
+     cidrBlocks: ["198.51.100.0/12"]
+    pods:
+     cidrBlocks: ["192.2.2.0/16"]

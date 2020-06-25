@@ -10,7 +10,7 @@ spec:
      class: best-effort-xsmall # vmclass to be used for master(s) 
      storageClass: vs7wk8s
     workers:
-      count: 2
+      count: 1
       class: best-effort-xsmall # vmclass to be used for workers(s) 
       storageClass: vs7wk8s
   distribution:

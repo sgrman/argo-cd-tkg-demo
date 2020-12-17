@@ -759,16 +759,16 @@ metadata:
   namespace: default
 spec:
   clusterName: tkg-sgr-flhr-cl01
-  nodeStartupTimeout: 20m
+  nodeStartupTimeout: 20m0s
   selector:
     matchLabels:
       node-pool: tkg-sgr-flhr-cl01-worker-pool
   unhealthyConditions:
   - status: Unknown
-    timeout: 5m
+    timeout: 5m0s
     type: Ready
   - status: "False"
-    timeout: 5m
+    timeout: 5m0s
     type: Ready
 ---
 apiVersion: addons.cluster.x-k8s.io/v1alpha3
